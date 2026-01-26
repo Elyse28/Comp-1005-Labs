@@ -1,0 +1,18 @@
+def story():
+    print("In a far off land, ther once lived a hermit stuck in a cave. The hermit wants to escape the cave but doesnt remember which he came from, which way should the hermit go UP, DOWN, LEFT, or RIGHT? ")
+    direction = input(": ").upper()
+    if direction == "UP":
+        print("The hermit sets on his journey up the cliff. After what felt like a long gruelling journey he finds an ogre. Should the hermit FIGHT the ogre or RUN away?")
+        action = input(": ").upper()
+    elif direction == "DOWN":
+        print("The hermit follows the cave down feeling the earth getting colder and colder. Suddenly the hermit finds themselves at a split in the cave and feels a gust of wind. Should the hermit go LEFT or RIGHT?")
+        action = input(": ").upper()
+    elif direction == "LEFT":
+        print("The hermit goes left, neither climbing nor descending. All of the sudden their feet feels wet finding themselves walking into a river. Should the hermit SWIM across or FOLLOW the river?")
+        action = input(": ").upper()
+    elif direction == "RIGHT":
+        print("The hermit goes right walking into the darkness. Swoosh, the hermit falls into a deep pit. Should the hermit CLIMB out or STAY and wait for help?")
+        action = input(": ").upper()
+    else:
+        print("The hermit is confused and crys in the cave forever.")
+story()
