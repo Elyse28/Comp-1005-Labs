@@ -1,6 +1,9 @@
 def GuessingGame():
     import random
     max = float(input("Enter the maximum number: "))
+    if max != int(max):
+        print("Please enter a whole number without a decimal point")
+        return GuessingGame()
     number=random.randint(1,max)
     guess = float(input("Enter your guess: "))
     for i in range(5):
