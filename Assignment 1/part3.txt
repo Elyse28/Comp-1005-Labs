@@ -1,0 +1,6 @@
+1: Define guessing game function
+2: X = random number
+3: Ask user to enter a number
+4: if guess = x say you win and stop code
+5: if guess does not = x give a hint and ask for the user to guess again			
+6: repeat line 5 until user guesses correctly			
