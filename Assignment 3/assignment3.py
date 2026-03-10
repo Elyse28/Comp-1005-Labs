@@ -27,6 +27,13 @@ def main():
         print("❌ EMF Data Test Failed")
         print(f"   Expected: {emf_expected}")
         print(f"   Actual Return Value: {emf_data}")
+    if temp_data == temp_expected:
+        print("✅ Temp Data Test Passed")
+    else:
+        print("❌ Temp Data Test Failed")
+        print(f"   Expected: {temp_expected}")
+        print(f"   Actual Return Value: {temp_data}")
+
 
     # TODO: Test EMF Data and Temp Data
 
@@ -88,7 +95,26 @@ def read_temperature(location_name):
         A list of room names where five or more consecutive negative temperatures were detected in the file.
     """  
     rooms = []
-
+    myfile = open("ravensnest.temp.txt", "r")
+    oldroom = ""
+    for line in myfile:
+        line = line.strip()
+        line = line.split(",")
+        for value in range(len(line)):
+            if line[value] != oldroom:
+                total = 0
+                count = 0
+            if line[value].isdigit() == False:
+                oldroom = line[value]
+            elif line[value].isdigit() == True:
+                if line[value] <= 170:
+                    if line[value] <= 0:
+                        total += 1
+                        count += 1
+                    else:
+                        count = 0
+        if total >= 5 and count == 5:
+            rooms.append(oldroom)
     return rooms
 
 # TODO: Write your generate_report and get_unique_rooms functions here, as well as the docstring (function comment documentation) for each based on the provided function examples.
