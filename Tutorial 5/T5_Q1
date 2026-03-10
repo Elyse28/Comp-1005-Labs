@@ -1,0 +1,9 @@
+def text_loop():
+    rows = int(input("Enter the number of rows: "))
+    num = 1
+    for i in range(rows):
+        for i in range(num):
+            print(num, end="")
+        print("")
+        num += 1
+text_loop()

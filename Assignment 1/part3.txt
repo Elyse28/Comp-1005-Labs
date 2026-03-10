@@ -1,0 +1,13 @@
+1: Define guessing game function:
+2: 		X = random number
+3: 		float = input(print("Enter a number"))
+4:		repeat until float = X:
+5:			if float == X:
+6:				print(" You win!!")
+7:				stop code 
+8:			elif float is less than x:
+9:				print "too high"
+10:				float = input(print("Enter a number"))
+11:			else:
+12:				print "too low"
+13:				float = input(print("Enter a number"))
